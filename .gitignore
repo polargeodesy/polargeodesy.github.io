@@ -5,3 +5,13 @@ resources/
 
 # Editor
 .vscode/
+
+# OS files
+.DS_Store
+
+# backup files
+*.bak
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml

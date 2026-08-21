@@ -1,0 +1,99 @@
+---
+title: Publications
+weight: 3
+---
+
+Select publications from the lab. For a complete and up-to-date list, see the [Google Scholar](https://scholar.google.com) or [ORCID](https://orcid.org) profiles of the [lab team members](../people/index.html).
+
+{{< details title="2026" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Smith:2026jr
+---
+{{< /details >}}
+
+{{< details title="2025" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @BishopTaylor:2025dc
+  @Magruder:2025eq
+  @Smith:2025fz
+  @Smith:2025gq
+  @Sutterley:2025ko
+  @Verboncoeur:2025js
+  @Zemp:2025dr
+---
+{{< /details >}}
+
+
+{{< details title="2024" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Greene:2024di
+  @Studinger:2024gr
+---
+{{< /details >}}
+
+{{< details title="2023" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Otosaka:2023kq
+  @Ryan:2023en
+  @Scheick:2023ku
+  @Shean:2023ej
+  @Smith:2023bt
+---
+{{< /details >}}
+
+{{< details title="2021" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Alley:2021ds
+  @Brunt:2021io
+  @Mohajerani:2021ki
+---
+{{< /details >}}
+
+{{< details title="2020" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Hawley:2020fm
+  @Shepherd:2020jx
+  @Sutterley:2020js
+  @Velicogna:2020ek
+---
+{{< /details >}}
+
+
+{{< details title="2019" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Sutterley:2019bx
+  @Sutterley:2019cl
+---
+{{< /details >}}
+
+{{< details title="2018" closed="true" >}}
+---
+bibliography: assets/pdc/pub.bib
+citation-style: assets/pdc/nature.csl
+nocite: |
+  @Ciraci:2018bd
+  @Shepherd:2018ca
+  @Sutterley:2018cc
+---
+{{< /details >}}

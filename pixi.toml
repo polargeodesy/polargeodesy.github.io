@@ -1,0 +1,24 @@
+[workspace]
+authors = ["UW-APL Geodesy Lab"]
+channels = ["conda-forge"]
+name = "polargeodesy.github.io"
+platforms = ["linux-64"]
+version = "2026"
+
+[tasks.webserver]
+args = [ { "arg" = "port", "default" = "1313" } ]
+cmd = "hugo server --disableFastRender --port {{ port }}"
+description = "Locally build and serve the site with hugo"
+
+[tasks.build]
+args = [ { "arg" = "flags", "default" = "" } ]
+cmd = "hugo --gc --minify {{ flags }}"
+description = "Build the site for deployment with hugo"
+
+[dependencies]
+# Golang open-source programming language
+go = "*"
+# extended version of the Hugo static site generator
+hugo = "==0.164.0"
+# pandoc for bibliographies
+pandoc = "*"

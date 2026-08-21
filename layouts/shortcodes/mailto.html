@@ -1,0 +1,35 @@
+{{/*
+  layouts/shortcodes/mailto.html
+
+  Simple email obfuscator and link generator
+
+  Usage:
+    {{< mailto local-part="atlas" domain="uw.edu" >}}
+
+  Optional params:
+    content - link text (default "email")
+*/}}
+{{ $local := .Get "local-part" }}
+{{ $domain := .Get "domain" }}
+{{ $content := .Get "content" | default "email" }}
+{{/* Reverse each string so the raw emails are not in the HTML source */}}
+{{ $localRev := "" }}
+{{ range (split $local "") }}{{ $localRev = printf "%s%s" . $localRev }}{{ end }}
+{{ $domainRev := "" }}
+{{ range (split $domain "") }}{{ $domainRev = printf "%s%s" . $domainRev }}{{ end }}
+<a href="#" class="obfuscated" data-l="{{ $localRev }}" data-d="{{ $domainRev }}">{{ $content }}</a>
+
+<script>
+(function () {
+  function decodeMailto(event) {
+    var link = event.currentTarget;
+    var local = link.dataset.l.split("").reverse().join("");
+    var domain = link.dataset.d.split("").reverse().join("");
+    link.href = "mailto:" + local + "@" + domain;
+  }
+
+  document.querySelectorAll("a.obfuscated").forEach(function (link) {
+    link.addEventListener("click", decodeMailto);
+  });
+})();
+</script>

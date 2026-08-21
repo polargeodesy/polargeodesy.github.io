@@ -1,0 +1,20 @@
+{{/*
+  layouts/shortcodes/recentnews.html
+
+  Displays the most recent pages from content/news/
+
+  Usage:
+    {{< recentnews limit="3" >}}
+
+  Optional params:
+    limit  - number of news items to display (default 3)
+*/}}
+{{ $limit := .Get "limit" | default "3" }}
+{{ $limit := int $limit }}
+{{ $news := where .Site.RegularPages "Section" "news" }}
+{{ $news := $news.ByDate.Reverse }}
+{{ range first $limit $news }}
+### [{{ .Title }}]({{ .RelPermalink }}) &middot; {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }} *{{ .Date.Format "(January 2006)" }}* 
+
+<div class="hx:mt-2"></div>
+{{ end }}
