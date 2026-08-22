@@ -1,17 +1,25 @@
 ---
-title: My Site
-toc: false
+title: Polar Geodesy Lab
+layout: hextra-home
 ---
 
-This is the landing page.
+{{<hextra/hero-container
+  image="/images/88S.jpg"
+  imageTitle="On Traverse"
+  imageWidth="600"
+>}}
 
-## Explore
+<div class="hx:mt-1">
+{{<hextra/hero-headline>}}
+  UW-APL Polar Geodesy Lab
+{{</hextra/hero-headline>}}
+</div>
 
-{{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
-{{< /cards >}}
+<div class="hx:mt-3 hx:max-w-xl">
+{{<hextra/hero-subtitle>}} 
+  Observing the Earth's polar regions from the ground, air, and space
+{{</hextra/hero-subtitle>}}
+</div>
 
-## Documentation
 
-For more information, visit [Hextra](https://imfing.github.io/hextra).
+{{</hextra/hero-container>}}

@@ -1,10 +1,18 @@
 # Hugo configuration file
+baseURL: https://polargeodesy.github.io/
+languageCode: en-us
 title: Geodesy Lab at the UW-APL Polar Science Center
+enableGitInfo: true
 
 # import hextra as module
 module:
   imports:
     - path: github.com/imfing/hextra
+
+outputs:
+  home: [html]
+  page: [html]
+  section: [html]
 
 markup:
   # allow raw html
@@ -18,27 +26,39 @@ markup:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
+    - name: People
+      pageRef: /people
       weight: 1
-    - name: About
-      pageRef: /about
+    - name: Research
+      pageRef: /research
       weight: 2
-    - name: Contact ↗
-      url: "https://github.com/polargeodesy"
+    - name: Publications
+      pageRef: /publications
       weight: 3
-    - name: Search
+    - name: Contact
+      pageRef: /contact
       weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 5
-      url: "https://github.com/polargeodesy/polargeodesy.github.io"
+      weight: 6
+      url: "https://github.com/polargeodesy"
       params:
         icon: github
 
+  sidebar:
+    - name: "UW Applied Physics Laboratory"
+      url: "https://apl.uw.edu/"
+      weight: 1
+    - name: "UW-APL Polar Science Center"
+      url: "https://psc.apl.uw.edu/"
+      weight: 2
+
 params:
-  description: Homepage for the Geodesy Laboratory at the UW-APL Polar Science Center.
+  description: >
+    Polar Geodesy Lab at the University of Washington Applied Physics Laboratory
 
   navbar:
     displayTitle: true
@@ -52,11 +72,23 @@ params:
     default: light
     displayToggle: false
 
+  page:
+    width: normal
+
   footer:
     enable: true
     width: normal
     displayCopyright: true
     displayPoweredBy: true
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
 
   highlight:
     copy:
@@ -67,4 +99,6 @@ params:
     enable: false
 
   editURL:
-    enable: false
+    enable: true
+    base: "https://github.com/polargeodesy/polargeodesy.github.io/edit/main/content"
+
