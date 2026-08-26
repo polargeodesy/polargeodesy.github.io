@@ -67,3 +67,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Deploy to UW 
+  uw:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to UW Web Servers
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.UWHOST }}
+          username: ${{ secrets.UWUSER }}
+          password: ${{ secrets.UWPASS }}
+          port: ${{ secrets.PORT }}
+          source: "public/*"
+          target: public_html
