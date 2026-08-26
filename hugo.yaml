@@ -64,8 +64,8 @@ params:
     displayTitle: true
     displayLogo: true
     logo:
-      path: /images/atlas.png
-      link: /
+      path: images/atlas.png
+      link: https://polargeodesy.github.io
       width: 60
 
   theme:

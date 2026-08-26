@@ -10,13 +10,16 @@
     size  - pixel size requested from GitHub (default 200; GitHub scales/
             crops server-side, keeps the transferred file size down)
     class - CSS class on the <img> (default "person-photo")
+    title - optional hover tooltip text
 */}}
 {{ $id := .Get "id" }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $size := .Get "size" | default "200" }}
 {{ $class := .Get "class" | default "person-photo" }}
+{{ $title := .Get "title" }}
 <img
   src="https://avatars.githubusercontent.com/u/{{ $id }}?s={{ $size }}"
   alt="{{ $alt }}"
   class="{{ $class }}"
+  {{ with $title }}title="{{ . }}"{{ end }}
 />
