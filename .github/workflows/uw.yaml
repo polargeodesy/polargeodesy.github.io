@@ -45,11 +45,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: uw-pages
+          name: uw-staff
           path: ./public
 
   # Deploy to UW 
-  uw:
+  deploy:
+    environment:
+      name: uw-staff
+      url: https://staff.washington.edu/${{ secrets.UWUSER }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -57,7 +60,7 @@ jobs:
         id: download
         uses: actions/download-artifact@v8
         with:
-          name: uw-pages
+          name: uw-staff
           path: public_html
       - name: Deploy to UW Web Servers
         uses: appleboy/scp-action@v1
