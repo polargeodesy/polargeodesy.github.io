@@ -19,7 +19,6 @@ defaults:
 
 jobs:
   add-preview:
-#    if: github.event.pull_request.draft == false
     if: contains(github.event.pull_request.labels.*.name, 'preview')
     runs-on: ubuntu-latest
     env:
