@@ -1,4 +1,4 @@
-module github.com/imfing/hextra-starter-template
+module github.com/tsutterley/polargeodesy.github.io
 
 go 1.26
 
