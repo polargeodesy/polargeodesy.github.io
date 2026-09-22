@@ -6,12 +6,12 @@ platforms = ["linux-64"]
 version = "2026"
 
 [tasks.webserver]
-args = [ { "arg" = "port", "default" = "1313" } ]
+args = [{ "arg" = "port", "default" = "1313" }]
 cmd = "hugo server --disableFastRender --port {{ port }}"
 description = "Locally build and serve the site with hugo"
 
 [tasks.build]
-args = [ { "arg" = "flags", "default" = "" } ]
+args = [{ "arg" = "flags", "default" = "" }]
 cmd = "hugo --gc --minify {{ flags }}"
 description = "Build the site for deployment with hugo"
 

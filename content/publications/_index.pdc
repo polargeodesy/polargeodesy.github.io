@@ -10,6 +10,7 @@ Select publications from the lab. For a complete and up-to-date list, see the [G
 bibliography: assets/pdc/pub.bib
 citation-style: assets/pdc/nature.csl
 nocite: |
+  @Otosaka:2026gl
   @Smith:2026jr
 ---
 {{< /details >}}
